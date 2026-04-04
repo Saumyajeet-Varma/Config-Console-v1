@@ -1,0 +1,24 @@
+{
+  "name": "config-console-v1",
+  "version": "1.0.0",
+  "description": "Server to manage my configs",
+  "keywords": [
+    "config",
+    "console"
+  ],
+  "license": "ISC",
+  "author": "Saumyajeet Varma",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
