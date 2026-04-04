@@ -33,6 +33,6 @@ const accessControlSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-const accessControlModel = mongoose.model("accessControl", accessControlSchema);
+const AccessControl = mongoose.model("AccessControl", accessControlSchema);
 
-export default accessControlModel;
+export default AccessControl;
