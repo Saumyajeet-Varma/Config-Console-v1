@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { isStrongPassword, isValidEmail } from "../utils/validation.js";
 import User from "../models/user.model.js";
-import AccessControl from "../models/AccessControl.model.js";
 import RefreshToken from "../models/RefreshToken.model.js";
 import sendEmail from "../utils/sendEmail.js";
 
@@ -20,7 +19,7 @@ const generateAccessToken = (user) => {
         },
         process.env.JWT_SECRET,
         {
-            expiresIn: "60m"
+            expiresIn: "30m"
         }
     );
 

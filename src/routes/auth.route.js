@@ -9,10 +9,10 @@ router.post("/register", register);
 router.post("/login", login);
 router.get("/me", authMiddleware, me);
 router.get("/verify-email", verifyEmail);
+router.post("/logout", logout);
 
 // NOT TESTED YET
-router.post("/refresh", refresh);
-router.post("/logout", logout);
+router.post("/refresh", refresh);    // Most probably this should work :)
 router.post("/logout-all", authMiddleware, logoutAll);
 
 export default router;
