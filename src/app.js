@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors"
+import morgan from "morgan"
 import authRoute from "./routes/auth.route.js";
 
 dotenv.config();
@@ -11,6 +12,7 @@ app.use(cors({
     origin: process.env.UI_URL,
     credentials: true
 }));
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
